@@ -1,0 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.active {
+    color: #F9F9F9;
+}
+
+.nav-links:hover:not(.active) {
+    color: #F9F9F9;
+}
