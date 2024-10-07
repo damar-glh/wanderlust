@@ -15,32 +15,42 @@
           rel="stylesheet">
 </head>
 <body>
-<section id="home" class="relative bg-cover min-h-screen w-full"
-         style="background-image: url('assets/cover-home.jpg');">
+<section id="home" class="relative bg-cover min-h-screen w-full light-bg">
     <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur"></div>
     <header>
         <nav class="fixed top-0 left-0 w-full flex justify-between md:justify-around items-center p-5 md:p-7 z-10">
             <div class="text-white font-black text-2xl md:text-3xl text-center">
                 <a href="index.html">Wander<strong class="text-color-pallet-quaternary">Lush.</strong></a>
             </div>
-            <button class="btn-nav flex md:hidden font-semibold text-color-pallet-primary px-3 py-2 md:px-4 md:py-2 rounded-3xl bg-opacity-20 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                     class="lucide lucide-menu">
-                    <line x1="3" x2="21" y1="12" y2="12"/>
-                    <line x1="3" x2="21" y1="6" y2="6"/>
-                    <line x1="3" x2="21" y1="18" y2="18"/>
-                </svg>
-            </button>
             <ul class="nav-items hidden md:flex md:space-x-8 md:text-base text-color-pallet-quinary md:gap-3.5 font-bold">
                 <li><a href="#home" class="nav-links active">Home</a></li>
                 <li><a href="#destinations" class="nav-links">Destination</a></li>
                 <li><a href="#about" class="nav-links">About</a></li>
                 <li><a href="#contact" class="nav-links">Contact</a></li>
             </ul>
-            <button class="hidden md:flex font-semibold text-color-pallet-primary px-3 py-2 md:px-4 md:py-2 rounded-3xl border-2 border-color-pallet-800 bg-opacity-25 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300">
-                Schedule Now
-            </button>
+            <div class="flex gap-5">
+                <button id="light-btn" class="btn-light md:flex font-semibold text-color-pallet-primary px-3 py-2 md:px-4 md:py-2 rounded-3xl bg-opacity-20 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300" onclick="setLightMode()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-moon-star">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/>
+                        <path d="M20 3v4"/>
+                        <path d="M22 5h-4"/>
+                    </svg>
+                </button>
+                <button id="dark-btn" class="md:flex font-semibold text-color-pallet-primary px-3 py-2 md:px-4 md:py-2 rounded-3xl bg-opacity-20 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300" onclick="setDarkMode()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
+                <button class="btn-nav flex md:hidden font-semibold text-color-pallet-primary px-3 py-2 md:px-4 md:py-2 rounded-3xl bg-opacity-20 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-menu">
+                        <line x1="3" x2="21" y1="12" y2="12"/>
+                        <line x1="3" x2="21" y1="6" y2="6"/>
+                        <line x1="3" x2="21" y1="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
         </nav>
         <main class="flex flex-col items-center justify-center gap-3.5 h-full relative text-center text-white px-6 md:px-0">
             <h1 class="text-3xl text-center md:text-5xl font-bold mb-2 md:mb-4">Explore the World</h1>
@@ -124,23 +134,25 @@
         </div>
     </header>
 </section>
-<section id="destinations" class="py-10 bg-color-pallet-nonary md:bg-color-pallet-primary min-h-screen w-full">
+<section id="destinations" class="py-10 dark:bg-black bg-color-pallet-primary min-h-screen w-full">
     <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center mb-10">
         <div class="w-full flex flex-col justify-center lg:justify-start gap-5">
-            <h2 class="text-4xl md:text-5xl text-color-pallet-primary md:text-black font-black text-center lg:text-left">Top Destinations</h2>
-            <p class="text-4xl md:text-5xl text-color-pallet-primary md:text-black font-black text-center lg:text-left">of <strong
+            <h2 class="text-4xl md:text-5xl dark:text-color-pallet-primary font-black text-center lg:text-left">
+                Top Destinations</h2>
+            <p class="text-4xl md:text-5xl dark:text-color-pallet-primary font-black text-center lg:text-left">
+                of <strong
                     class="text-color-pallet-quinary">the</strong><strong
                     class="text-color-pallet-quaternary">World</strong></p>
         </div>
         <div class="w-full text-center px-6 md:px-0 lg:text-right space-y-6 mt-8">
-            <p class="md:text-color-pallet-septenary text-color-pallet-primary lg:text-left text-base leading-relaxed">
+            <p class="text-color-pallet-septenary dark:text-color-pallet-primary lg:text-left text-base leading-relaxed">
                 Whether you're a seasoned traveler or just starting out on your adventure, we’ve curated a selection of
                 the most breathtaking destinations around the globe. From pristine beaches that stretch for miles to
                 historic cities brimming with culture, each location offers a unique experience. Picture yourself hiking
                 through lush mountains, wandering through ancient temples, or sipping coffee in the heart of a vibrant
                 city.
             </p>
-            <button class="flex mx-auto md:mx-0 gap-3.5 mt-2 text-color-pallet-primary px-6 py-3 rounded-3xl border-2 md:border-color-pallet-denary md:bg-color-pallet-denary md:hover:bg-color-pallet-primary md:hover:text-color-pallet-octonary border-color-pallet-800 bg-opacity-25 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300">
+            <button class="flex mx-auto md:mx-0 gap-3.5 mt-2 font-semibold dark:text-color-pallet-primary px-6 py-3 rounded-3xl border-2 border-color-pallet-denary hover:bg-black hover:text-color-pallet-primary dark:border-2 dark:bg-opacity-25 dark:bg-white dark:hover:bg-color-pallet-primary dark:hover:text-color-pallet-octonary  dark:border-color-pallet-primary ease-in-out duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                      class="lucide lucide-circle-arrow-left">
@@ -205,18 +217,21 @@
             <div class="absolute inset-0 bg-black bg-opacity-25 rounded-3xl flex items-center justify-center">
                 <div class="text-color-pallet-primary p-4">
                     <h3 class="text-3xl text-center font-bold">Tokyo Japan</h3>
-                    <p class="mt-2 text-center text-color-pallet-primary font-medium">A Fusion of Tradition and Modernity</p>
+                    <p class="mt-2 text-center text-color-pallet-primary font-medium">A Fusion of Tradition and
+                        Modernity</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="about" class="py-16 bg-color-pallet-nonary md:bg-color-pallet-primary min-h-screen w-full flex justify-center items-center">
+<section id="about"
+         class="py-16 dark:bg-black md:bg-color-pallet-primary min-h-screen w-full flex justify-center items-center">
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-8">
         <div class="flex flex-col p-7 sm:p-0 md:w-2/4 md:text-left space-y-10">
             <h2 class="text-color-pallet-quinary font-semibold text-3xl md:text-4xl">How It Started</h2>
-            <h1 class="text-4xl text-color-pallet-primary md:text-black md:text-5xl font-bold">Our Dream is Global Travel Exploration</h1>
-            <p class="text-color-pallet-primary md:text-black text-base w-3/4">
+            <h1 class="text-4xl dark:text-color-pallet-primary md:text-5xl font-bold">Our Dream is Global
+                Travel Exploration</h1>
+            <p class="dark:text-color-pallet-primary text-base w-3/4">
                 Wanderlush was founded by adventurers damar galih, who shared a passion for travel and exploration.
                 Their mission was to make the world more accessible by building a platform where travelers can easily
                 discover and
@@ -231,46 +246,51 @@
             </div>
             <div class="flex flex-wrap gap-6">
                 <div class="p-6 text-center flex-1 min-w-[45%]">
-                    <h2 class="text-3xl text-color-pallet-primary md:text-black font-bold">1.5</h2>
+                    <h2 class="text-3xl dark:text-color-pallet-primary font-bold">1.5</h2>
                     <p class="text-color-pallet-quinary">Years of Travel</p>
                 </div>
                 <div class="p-6 text-center flex-1 min-w-[45%]">
-                    <h2 class="text-3xl text-color-pallet-primary md:text-black font-bold">5</h2>
+                    <h2 class="text-3xl dark:text-color-pallet-primary font-bold">5</h2>
                     <p class="text-color-pallet-quinary">Countries Covered</p>
                 </div>
                 <div class="p-6 text-center flex-1 min-w-[45%]">
-                    <h2 class="text-3xl text-color-pallet-primary md:text-black font-bold">50+</h2>
+                    <h2 class="text-3xl dark:text-color-pallet-primary font-bold">50+</h2>
                     <p class="text-color-pallet-quinary">Happy Travelers</p>
                 </div>
                 <div class="p-6 text-center flex-1 min-w-[45%]">
-                    <h2 class="text-3xl text-color-pallet-primary md:text-black font-bold">500M+</h2>
+                    <h2 class="text-3xl dark:text-color-pallet-primary font-bold">500M+</h2>
                     <p class="text-color-pallet-quinary">Total Miles Traveled</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="contact" class="py-16 bg-color-pallet-nonary md:bg-color-pallet-primary min-h-screen w-full flex justify-center items-center">
+<section id="contact"
+         class="py-16 dark:bg-black bg-color-pallet-primary min-h-screen w-full flex justify-center items-center">
     <div class="container mx-auto px-4">
-        <h3 class="text-4xl md:text-5xl text-color-pallet-primary md:text-black font-bold text-center mb-10">Get in Touch</h3>
+        <h3 class="text-4xl md:text-5xl dark:text-color-pallet-primary font-bold text-center mb-10">Get in
+            Touch</h3>
         <div class="max-w-5xl mx-auto p-8">
             <form action="#" method="POST" class="space-y-6">
                 <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
                     <div class="flex-1">
-                        <label for="name" class="block text-color-pallet-primary md:text-black font-medium">Your name</label>
+                        <label for="name" class="block dark:text-color-pallet-primary font-medium">Your
+                            name</label>
                         <input type="text" id="name" name="name" placeholder="Your name"
                                class="mt-1 block w-full p-3 rounded-md shadow-sm focus:border-color-pallet-denary"
                                required>
                     </div>
                     <div class="flex-1">
-                        <label for="email" class="block text-color-pallet-primary md:text-black font-medium">Your email</label>
+                        <label for="email" class="block dark:text-color-pallet-primary font-medium">Your
+                            email</label>
                         <input type="email" id="email" name="email" placeholder="you@example.com"
                                class="mt-1 block w-full p-3 rounded-md shadow-sm" required>
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
                     <div class="flex-1">
-                        <label for="interest" class="block text-color-pallet-primary md:text-black font-medium">What you are interested in</label>
+                        <label for="interest" class="block dark:text-color-pallet-primary font-medium">What you
+                            are interested in</label>
                         <select id="interest" name="interest" class="mt-1 block w-full p-3 rounded-md">
                             <option>Adventure Travel</option>
                             <option>Luxury Destinations</option>
@@ -281,7 +301,8 @@
                     </div>
 
                     <div class="flex-1">
-                        <label for="budget" class="block text-color-pallet-primary md:text-black font-medium">Project Budget</label>
+                        <label for="budget" class="block dark:text-color-pallet-primary font-medium">Project
+                            Budget</label>
                         <select id="budget" name="budget" class="mt-1 block w-full p-3 rounded-md shadow-sm">
                             <option>Less than $1,000</option>
                             <option>$1,000 - $5,000</option>
@@ -292,19 +313,21 @@
                 </div>
                 <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
                     <div class="flex-1">
-                        <label for="destination" class="block text-color-pallet-primary md:text-black font-medium">Preferred Destination</label>
+                        <label for="destination" class="block dark:text-color-pallet-primary font-medium">Preferred
+                            Destination</label>
                         <input type="text" id="destination" name="destination" placeholder="e.g., Paris, Bali, New York"
                                class="mt-1 block w-full p-3 rounded-md shadow-sm" required>
                     </div>
                 </div>
                 <div>
-                    <label for="message" class="block text-color-pallet-primary md:text-black font-medium">Message</label>
+                    <label for="message"
+                           class="block dark:text-color-pallet-primary font-medium">Message</label>
                     <textarea id="message" name="message" rows="5"
                               placeholder="Let us know your project or travel plans"
                               class="mt-1 block w-full p-3 rounded-md"></textarea>
                 </div>
                 <button type="submit"
-                        class="flex mx-auto text-color-pallet-primary font-bold gap-3.5 py-3 px-6 rounded-3xl border-2 border-color-pallet-denary bg-color-pallet-denary hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300">
+                        class="flex mx-auto gap-3.5 py-3 px-6 font-semibold dark:text-color-pallet-primary rounded-3xl border-2 border-color-pallet-denary hover:bg-black hover:text-color-pallet-primary dark:border-2 dark:bg-opacity-25 dark:bg-white dark:hover:bg-color-pallet-primary dark:hover:text-color-pallet-octonary  dark:border-color-pallet-primary ease-in-out duration-300">
                     Send Now
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -317,13 +340,14 @@
         </div>
     </div>
 </section>
-<footer id="footer" class="py-16 bg-color-pallet-nonary md:bg-color-pallet-primary">
+<footer id="footer" class="py-16 dark:bg-black bg-color-pallet-primary">
     <div class="container mx-auto flex flex-col md:flex-row justify-around">
         <div class="flex flex-col mb-7 md:mb-0 text-center md:text-left">
-            <div class="text-3xl md:text-4xl text-color-pallet-primary md:text-black font-bold">Wander<strong
+            <div class="text-3xl md:text-4xl dark:text-color-pallet-primary font-bold">Wander<strong
                     class="text-color-pallet-quaternary">lush.</strong></div>
-            <p class="text-base text-color-pallet-primary md:text-black mt-2">Explore countless travel opportunities and <br> create unforgettable memories.</p>
-            <div class="flex gap-5 text-color-pallet-primary md:text-black justify-center md:justify-start py-7">
+            <p class="text-base dark:text-color-pallet-primary mt-2">Explore countless travel opportunities and
+                <br> create unforgettable memories.</p>
+            <div class="flex gap-5 dark:text-color-pallet-primary justify-center md:justify-start py-7">
                 <a href="https://twitter.com" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -368,14 +392,14 @@
         </div>
         <div class="flex flex-col md:flex-row text-center md:text-left  items-center md:items-start gap-10">
             <div class="flex flex-col space-y-4 mb-7 md:mb-0">
-                <h4 class="font-semibold text-color-pallet-primary md:text-black text-xl md:text-2xl">Navbar</h4>
+                <h4 class="font-semibold dark:text-color-pallet-primary text-xl md:text-2xl">Navbar</h4>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Home</a>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Destinations</a>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">About</a>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Contact</a>
             </div>
             <div class="flex flex-col space-y-4 mb-7 md:mb-0">
-                <h4 class="font-semibold text-color-pallet-primary md:text-black text-xl md:text-2xl">Destinations</h4>
+                <h4 class="font-semibold dark:text-color-pallet-primary text-xl md:text-2xl">Destinations</h4>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">France</a>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Indonesia</a>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Italy</a>
@@ -383,7 +407,7 @@
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Japan</a>
             </div>
             <div class="flex flex-col space-y-4 mb-7 md:mb-0">
-                <h4 class="font-semibold text-color-pallet-primary md:text-black text-xl md:text-2xl">Resources</h4>
+                <h4 class="font-semibold dark:text-color-pallet-primary text-xl md:text-2xl">Resources</h4>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Blog</a>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Newsletter</a>
                 <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Events</a>

@@ -9,3 +9,11 @@ html {
 .nav-links:hover:not(.active) {
     color: #F9F9F9;
 }
+
+.dark-bg {
+  background-image: url('https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.light-bg {
+  background-image: url('https://images.pexels.com/photos/19536556/pexels-photo-19536556/free-photo-of-winter-if-you-like-my-work-consider-supporting-me-at-https-www-patreon-com-marekpiwnicki.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+}

@@ -3,7 +3,6 @@ const btnNav = document.querySelector('.btn-nav');
 const navItems = document.querySelector('.nav-items');
 const navLinks = document.querySelectorAll('.nav-links');
 
-
 window.addEventListener('scroll', function () {
     const scrollHeight = window.scrollY;
     if (scrollHeight > 50) {
@@ -33,3 +32,39 @@ btnNav.addEventListener('click', function () {
         }
     }
 );
+
+function setDarkMode() {
+    document.documentElement.classList.add('dark');
+    document.getElementById('home').classList.remove('light-bg');
+    document.getElementById('home').classList.add('dark-bg');
+    localStorage.setItem('theme', 'dark');
+    document.getElementById('light-btn').style.display = 'flex';
+    document.getElementById('dark-btn').style.display = 'none';
+}
+
+function setLightMode() {
+    document.documentElement.classList.remove('dark');
+    document.getElementById('home').classList.remove('dark-bg');
+    document.getElementById('home').classList.add('light-bg');
+    localStorage.setItem('theme', 'light');
+    document.getElementById('dark-btn').style.display = 'flex';
+    document.getElementById('light-btn').style.display = 'none';
+}
+
+window.onload = function () {
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.getElementById('home').classList.remove('light-bg');
+        document.getElementById('home').classList.add('dark-bg');
+        document.getElementById('light-btn').style.display = 'flex';
+        document.getElementById('dark-btn').style.display = 'none';
+    } else {
+        document.documentElement.classList.remove('dark');
+        document.getElementById('home').classList.remove('dark-bg');
+        document.getElementById('home').classList.add('light-bg');
+        document.getElementById('dark-btn').style.display = 'flex';
+        document.getElementById('light-btn').style.display = 'none';
+    }
+};
+
+console.log('Classes on home:', document.getElementById('home').classList);
